@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt/Decrypt Tool</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="site-title"><span>AES-Encrypt</span></a>
+        <a href="base.html"><span>TEXT Encryption and Decryption</span></a>
+        <a href="File_encr.html"><span>File Encryption and Decryption</span></a>
+    </div>
+
+    <button onclick="window.location.href='info.html'" class="info-button">AES-CBC Info</button> <!-- Кнопка для інформації -->
+
+    <div class="container">
+        <div class="encrypt-section">
+            <h1>Шифрування тексту</h1>
+            <label for="input-text">Введіть текст:</label>
+            <textarea id="input-text" rows="4"></textarea>
+            <label for="key">Ключ:</label>
+            <div class="key-input-container">
+                <input type="text" id="key">
+                <img src="copy.png" alt="Копіювати ключ" class="copy-button" onclick="copyKeyToClipboard()">
+            </div>
+            <p id="copy-message"></p> <!-- Повідомлення про копіювання -->
+            <label>Оберіть розмір ключа:</label>
+            <div class="key-buttons">
+                <button class="key-button" data-size="128" onclick="selectKeySize(128)">128 bits</button>
+                <button class="key-button" data-size="192" onclick="selectKeySize(192)">192 bits</button>
+                <button class="key-button" data-size="256" onclick="selectKeySize(256)">256 bits</button>
+                <button class="key-button" onclick="generateKeyFromSelectedSize()">Згенерувати ключ</button>
+            </div>
+            <label>Оберіть формат виводу:</label>
+            <div class="output-format-buttons">
+                <button class="format-button" data-format="Base64" onclick="selectOutputFormat('Base64')">Base64</button>
+                <button class="format-button" data-format="Hex" onclick="selectOutputFormat('Hex')">HEX</button>
+            </div>
+            <label for="output-text">Результат:</label>
+            <textarea id="output-text" rows="4"></textarea>
+            <div class="buttons">
+                <button onclick="encrypt()">Зашифрувати</button>
+            </div>
+        </div>
+        <div class="decrypt-section">
+            <h1>Розшифрування тексту</h1>
+            <label for="ciphertext">Введіть зашифрований текст:</label>
+            <textarea id="ciphertext" rows="4"></textarea>
+            <label for="key-decrypt">Ключ:</label>
+            <input type="text" id="key-decrypt">
+            <div class="buttons">
+                <button onclick="decrypt()">Розшифрувати</button>
+            </div>
+            <label for="plaintext">Текст:</label>
+            <textarea id="plaintext" rows="4"></textarea>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Copyright Vladislav Lopashchenko
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

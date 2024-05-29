@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES-Encrypt</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px; /* Максимальна ширина контейнера */
+            margin: 0 auto; /* Розміщення контейнера по центру */
+            padding: 20px; /* Відступи від країв контейнера */
+            box-sizing: border-box; /* Розмір блока, враховуючи padding та border */
+            border: 1px solid #ccc; /* Рамка блоку */
+            text-align: center; /* Вирівнювання тексту по центру */
+        }
+        .navbar {
+            width: 100%; /* Розтягнути панель на всю ширину екрану */
+            display: flex;
+            background-color: white;
+            padding: 8px 0; /* Зменшена висота навігаційної панелі */
+            box-shadow: 0 5px 5px -5px gray;
+            justify-content: flex-start; /* Вирівнювання кнопок зліва */
+            align-items: center; /* Вирівнювання по вертикалі */
+        }
+        .navbar a {
+            color: gray; /* Колір тексту кнопок */
+            background-color: white;
+            padding: 10px 20px; /* Розмір кнопок */
+            text-decoration: none;
+            text-align: center;
+            margin: 0 5px;
+            transition: border-bottom 0.3s;
+            border-bottom: 2px solid transparent;
+            position: relative; /* Позиціонування відносно */
+        }
+        .navbar a span {
+            position: relative; /* Позиціонування відносно */
+            z-index: 1; /* Шар тексту поверх підкреслення */
+        }
+        .navbar a:hover span:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -8px; /* Відстань підкреслення від тексту */
+            height: 2px; /* Товщина підкреслення */
+            background-color: black; /* Колір підкреслення */
+        }
+        .navbar .site-title {
+            font-size: 1.2em; /* Розмір шрифту для головної кнопки */
+            color: black; /* Колір головної кнопки */
+            margin: 0;
+            text-align: left;
+            font-weight: 700;
+        }
+        .content {
+            margin-top: 20px; /* Відступ від верхньої панелі */
+        }
+        .footer {
+            background-color: #777;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="site-title"><span>AES-Encrypt</span></a>
+        <a href="base.html"><span>TEXT Encryption and Decryption</span></a>
+        <a href="File_encr.html"><span>File Encryption and Decryption</span></a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>Ласкаво просимо на сайт AES-Encrypt!</h1>
+            <p>Цей сайт допоможе вам зашифрувати та розшифрувати текст та файли за допомогою алгоритму AES.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 Copyright Vladislav Lopashchenko
+    </div>
+</body>
+</html>

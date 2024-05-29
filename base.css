@@ -1,0 +1,199 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    padding: 8px 0;
+    box-shadow: 0 5px 5px -5px gray;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.navbar a {
+    color: gray;
+    background-color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 5px;
+    transition: border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    position: relative;
+}
+
+.navbar a span {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar a:hover span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 2px;
+    background-color: black;
+}
+
+.navbar .site-title {
+    font-size: 1.2em;
+    color: rgb(58, 49, 49);
+    margin: 0;
+    text-align: left;
+    font-weight: 700;
+}
+
+.info-button {
+    position: fixed;
+    left: 1400px;
+    top: 120px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px b;
+    padding: 10px 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.info-button:hover {
+    background-color: rgb(49, 49, 49);
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+}
+
+textarea,
+input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000; /* змінено колір на чорний */
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+textarea:focus,
+input[type="text"]:focus {
+    border-color: #007bff;
+}
+
+label {
+    font-weight: bold;
+    color: #495057;
+}
+
+.key-buttons,
+.output-format-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.key-button,
+.format-button {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #000; /* змінено колір на чорний */
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s, color 0.3s;
+    margin-right: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.key-button.selected,
+.format-button.selected {
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    outline-color: #343a40;
+}
+
+button {
+    flex-grow: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #000000; /* змінено колір на чорний */
+    background-color: rgb(49, 49, 49);
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin: 5px;
+    outline: none;
+}
+
+button:hover {
+    background-color: rgb(49, 49, 49);
+    transition: background-color 0.3s;
+    color: rgb(255, 255, 255);
+}
+
+.copy-button {
+    margin-left: 570px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

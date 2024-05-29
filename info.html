@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES-CBC Info</title>
+    <link rel="stylesheet" href="base.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Код панелі з базової сторінки -->
+    <div class="navbar">
+        <a href="index.html" class="site-title"><span>AES-Encrypt</span></a>
+        <a href="base.html"><span>TEXT Encryption and Decryption</span></a>
+        <a href="File_encr.html"><span>File Encryption and Decryption</span></a>
+    </div>
+
+    <!-- Кнопка "Назад" -->
+    <button onclick="window.location.href='base.html'" class="back-button">Назад</button>
+
+    <!-- Вміст сторінки -->
+    <div class="container">
+        <h1>Що таке AES-CBC?</h1>
+        <p>AES-CBC (Advanced Encryption Standard - Cipher Block Chaining) - це один із найбільш популярних алгоритмів шифрування, який використовується для захисту інформації в комп'ютерних системах та мережах.</p>
+        <p>Він є частиною стандарту шифрування AES, який був прийнятий Національним інститутом стандартів і технологій США (NIST) у 2001 році. AES-CBC працює за принципом блочного шифрування, де кожен блок тексту обробляється окремо перед тим, як буде зашифрований.</p>
+        
+        <h2>Принцип роботи AES-CBC</h2>
+        <p>У режимі CBC, кожний блок тексту перед шифруванням використовується для змішування з попереднім зашифрованим блоком. Це унеможливлює підставлення частин інформації в шифртексті і підвищує безпеку шифрування. Однак, для першого блоку використовується унікальний ініціалізаційний вектор (IV).</p>
+
+        <h2>Зображення</h2>
+        <p>Нижче наведено кілька зображень, що ілюструють роботу AES-CBC:</p>
+        <div class="images">
+            <img src="cbc1.png" alt="AES-CBC 1">
+            <img src="cbc2.png" alt="AES-CBC 2">
+            <img src="cbc3.png" alt="AES-CBC 3">
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <div class="footer">
+        &copy; 2024 Copyright Vladislav Lopashchenko
+    </div>
+
+    <!-- Скрипти та підключення -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
